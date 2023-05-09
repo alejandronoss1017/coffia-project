@@ -16,12 +16,44 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  h1 {
+    @apply text-black text-4xl sm:text-6xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  body {
+    @apply bg-background;
+  }
+
+  .image-container {
+    @apply flex items-center;
+  }
+
+  .image-container img {
+    @apply rounded-full h-16 w-16 flex items-center justify-center m-3;
+  }
+
+  header nav {
+    @apply flex items-center;
+  }
+
+  .logo {
+    @apply rounded-full h-12 w-12 flex items-center justify-center m-3;
+  }
 }
