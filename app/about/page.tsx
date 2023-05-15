@@ -1,8 +1,10 @@
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Card from '../components/Card/Card';
-
-import Image from 'next/image';
+import OurClients from '../components/OurClients/OurClients';
+import Section from '../components/Section/Section';
+import BreakCard from '../components/BreakCard/BreakCard';
+import ImageOverlay from '../components/ImageOverlay/ImageOverlay';
 
 function AboutPage() {
   return (
@@ -10,53 +12,45 @@ function AboutPage() {
       <Header />
       <main>
         <section>
-          <h1>¿Por qué CoffIA?</h1>
-          <p>
-            CoffIA es una aplicación web que te ayuda a encontrar tu café ideal.
+          <ImageOverlay
+            title="¿Por qué CoffIA?"
+            description="CoffIA es una aplicación web que te ayuda a encontrar tu café ideal.
             Para ello, te pedimos que respondas un cuestionario de 5 preguntas
             sobre tus gustos y preferencias. Con esta información, CoffIA
             utiliza un algoritmo de aprendizaje automático para recomendarte el
             café que más se adapta a ti. Nuestro objetivo es que puedas
             disfrutar de una taza de café personalizada y que puedas apoyar a
-            nuestros orgullosos campesinos colombianos.
-          </p>
-        </section>
-
-        <div className="h-32 w-screen relative overflow-hidden">
-          <Image
-            src="/coffee-wallpaper.png"
-            fill={true}
-            quality={100}
-            alt="Background image"
-            className="object-cover"
+            nuestros orgullosos campesinos colombianos."
+            imageUrl="/coffee-wallpaper.png"
           />
-        </div>
-
-        <section>
-          <h1> ¿De donde surgio?</h1>
-          <p>
-            CoffIA es un proyecto que nació en el curso de Inteligencia
-            Artificial de la Universidad Javeriana. El objetivo del proyecto es
-            aplicar los conocimientos adquiridos en el curso para crear una
-            aplicación web que utilice un algoritmo de aprendizaje automático
-            para recomendar un café personalizado.
-          </p>
         </section>
 
-        <section>
-          <h1>¿Cómo funciona?</h1>
-          <p>
-            CoffIA utiliza un algoritmo de aprendizaje automático para
+        <BreakCard
+          title="¿De donde surgio?"
+          description="CoffIA es un proyecto que nació en el curso de Inteligencia
+        Artificial de la Universidad Javeriana. El objetivo del proyecto es
+        aplicar los conocimientos adquiridos en el curso para crear una
+        aplicación web que utilice un algoritmo de aprendizaje automático
+        para recomendar un café personalizado."
+        />
+
+        <Section
+          title="¿Cómo funciona?"
+          description="CoffIA utiliza un algoritmo de aprendizaje automático para
             recomendar un café personalizado. Para ello, CoffIA te pide que
             respondas un cuestionario de 5 preguntas sobre tus gustos y
             preferencias. Con esta información, CoffIA utiliza un algoritmo de
             aprendizaje automático para recomendarte el café que más se adapta a
-            ti.
-          </p>
-        </section>
-
+            ti."
+          imagePath="/coffee-wallpaper.png"
+          alt="Background image"
+          height={700}
+          width={700}
+        />
         <section>
-          <h1>Nuestros Clientes</h1>
+          <OurClients
+            images={['/FedeCafe.png', '/Javeriana.png', '/TostaoLogo.webp']}
+          />
         </section>
         <section>
           <h1 className="text-center">Conoce al equipo</h1>
