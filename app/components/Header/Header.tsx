@@ -28,12 +28,16 @@ function Header() {
                 <Link href="/shop" className={s.link}>
                   Tienda
                 </Link>
+                <Link href="/ia" className={s.link}>
+                  Preguntale a nuestra IA
+                </Link>
                 <Link href="/" className={s.link}>
-                  blog
+                  Blog
                 </Link>
                 <Link href="/" className={s.link}>
                   Trabaja con nosotros
                 </Link>
+                
               </nav>
             </div>
           </div>
