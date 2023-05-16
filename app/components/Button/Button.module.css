@@ -1,0 +1,31 @@
+.ButtonComponent {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.ButtonComponent:hover {
+  background-color: hsl(206, 91%, 39%);
+  color: hsl(0, 0%, 100%);
+}
+
+.ButtonComponent:active {
+  background-color: hsl(206, 91%, 39%);
+  color: hsl(0, 0%, 100%);
+  transform: translateY(5px);
+  transition: 100ms;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .ButtonComponent {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
