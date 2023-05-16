@@ -29,7 +29,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
   };
 
   return (
-    <div className=" md:w-96 md:h-96 sticky md:top-0 md:right-0 md:bottom-0 p-4">
+    <div className="sm:w-56 sm:h-56 lg:w-96 lg:h-96 sticky md:top-0 md:right-0 md:bottom-0 p-4">
       <div className="border-2 rounded-md p-5">
         <h2 className="text-lg font-bold mb-4">Carrito</h2>
 
