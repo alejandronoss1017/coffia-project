@@ -25,7 +25,7 @@ function Header() {
                 <Link href="/about" className={s.link}>
                   Acerca de nosotros
                 </Link>
-                <Link href="/" className={s.link}>
+                <Link href="/shop" className={s.link}>
                   Tienda
                 </Link>
                 <Link href="/" className={s.link}>
