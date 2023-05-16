@@ -16,7 +16,7 @@ const Products: React.FC<ProductsProps> = ({ products, addToCart }) => {
             className="w-full h-48 object-cover mb-4"
           />
           <h3 className="text-lg font-semibold">{product.name}</h3>
-          <p className="text-gray-500">{product.price}</p>
+          <p className="text-gray-500">{'$ '+ product.price}</p>
           <p> {product.description}</p>
           <div className=" text-center">
             <Button
