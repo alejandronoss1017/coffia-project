@@ -39,7 +39,7 @@ export default function Footer() {
             </li>
             <li className="py-3 md:py-0 md:pb-4">
               <Link
-                href="/"
+                href="/about"
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
                 Acerca de nosotros
@@ -47,10 +47,18 @@ export default function Footer() {
             </li>
             <li className="py-3 md:py-0 md:pb-4">
               <Link
-                href="/"
+                href="/shop"
                 className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
               >
                 Tienda
+              </Link>
+            </li>
+            <li className="py-3 md:py-0 md:pb-4">
+              <Link
+                href="/ia"
+                className="text-white hover:text-zinc-200 transition ease-in-out duration-150"
+              >
+                Preguntale a nuestra IA
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
