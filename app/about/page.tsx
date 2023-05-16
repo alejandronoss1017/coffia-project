@@ -57,7 +57,7 @@ function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <Card
               title="Juan"
-              description="CEO"
+              description="CEO de CoffIA"
               imagePath="/Juan.png"
               alt="CEO de CoffIA"
               height={100}
