@@ -3,21 +3,25 @@ import React, { useState } from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Button from '../components/Button/Button';
+import Loader from '../components/loader/Loader';
 
 const AIPage = () => {
+  const [message, setMessage] = useState('');
+  const [answer, setAnswer] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // Nuevo estado para controlar la carga
+
   const makeAPICall = async (question: string) => {
+    setIsLoading(true); // Cambiamos el estado a true para indicar que se está cargando
     const response = await fetch('/api/coffia-gpt', {
       method: 'POST',
       body: JSON.stringify({ question: question })
     });
 
     const data = await response.json();
-    
-    setAnswer(data.iaResponse);
-  };
 
-  const [message, setMessage] = useState('');
-  const [answer, setAnswer] = useState('');
+    setAnswer(data.iaResponse);
+    setIsLoading(false); // Cambiamos el estado a false para indicar que se ha terminado de cargar
+  };
 
   return (
     <>
@@ -64,8 +68,8 @@ const AIPage = () => {
           {/* Div de respuestas de la IA */}
           <div className="bg-gray-100 p-4 rounded">
             <p>Respuesta:</p>
-            <div>
-              <p>{answer}</p>
+            <div className="flex justify-center items-center">
+              {isLoading ? <Loader /> : <p>{answer}</p>}
             </div>
           </div>
         </section>
