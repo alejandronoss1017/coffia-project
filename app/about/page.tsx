@@ -5,6 +5,7 @@ import OurClients from '../components/OurClients/OurClients';
 import Section from '../components/Section/Section';
 import BreakCard from '../components/BreakCard/BreakCard';
 import ImageOverlay from '../components/ImageOverlay/ImageOverlay';
+import { clientsData } from '../data/clientsData';
 
 function AboutPage() {
   return (
@@ -25,32 +26,35 @@ function AboutPage() {
           />
         </section>
 
-        <BreakCard
-          title="¿De donde surgio?"
-          description="CoffIA es un proyecto que nació en el curso de Inteligencia
-        Artificial de la Universidad Javeriana. El objetivo del proyecto es
-        aplicar los conocimientos adquiridos en el curso para crear una
-        aplicación web que utilice un algoritmo de aprendizaje automático
-        para recomendar un café personalizado."
-        />
-
-        <Section
-          title="¿Cómo funciona?"
-          description="CoffIA utiliza un algoritmo de aprendizaje automático para
-            recomendar un café personalizado. Para ello, CoffIA te pide que
-            respondas un cuestionario de 5 preguntas sobre tus gustos y
-            preferencias. Con esta información, CoffIA utiliza un algoritmo de
-            aprendizaje automático para recomendarte el café que más se adapta a
-            ti."
-          imagePath="/coffee-wallpaper.png"
-          alt="Background image"
-          height={700}
-          width={700}
-        />
-        <section>
-          <OurClients
-            images={['/FedeCafe.png', '/Javeriana.png', '/TostaoLogo.webp']}
+        <div className="flex flex-col items-center my-5">
+          <BreakCard
+            title="¿De donde surgio?"
+            description="CoffIA es un proyecto que nació en el curso de Inteligencia
+          Artificial de la Universidad Javeriana. El objetivo del proyecto es
+          aplicar los conocimientos adquiridos en el curso para crear una
+          aplicación web que utilice un algoritmo de aprendizaje automático
+          para recomendar un café personalizado."
           />
+        </div>
+
+        <div className="flex flex-col items-center">
+          <Section
+            title="¿Cómo funciona?"
+            description="CoffIA utiliza un algoritmo de aprendizaje automático para
+          recomendar un café personalizado. Para ello, CoffIA te pide que
+          respondas un cuestionario de 5 preguntas sobre tus gustos y
+          preferencias. Con esta información, CoffIA utiliza un algoritmo de
+          aprendizaje automático para recomendarte el café que más se adapta a
+          ti."
+            imagePath="/coffee-wallpaper.png"
+            alt="Background image"
+            height={700}
+            width={700}
+          />
+        </div>
+
+        <section>
+          <OurClients clients={clientsData} />
         </section>
         <section>
           <h1 className="text-center">Conoce al equipo</h1>

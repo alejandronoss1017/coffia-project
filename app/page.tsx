@@ -8,35 +8,39 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between lg:p-24 sm:max-w-screen ">
+      <main className="flex flex-col items-center">
         <Section
           title="¿Que es CoffIA?"
           description="CoffIA es una aplicación web que te ayuda a encontrar tu café ideal. Para 
           ello, te pedimos que respondas un cuestionario de 5 preguntas sobre 
           tus gustos y preferencias. Con esta información, 
           CoffIA utiliza un algoritmo de aprendizaje automático para recomendarte el 
-          café que más se adapta a ti."
-          imagePath="/coffIALatte.svg"
+          café que más se adapta a ti.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua."
+          imagePath="/coffee-latte.png"
           alt="Latte Coffe"
-          height={500}
-          width={500}
+          width={420}
+          height={250}
         />
         <BreakCard
           imagePath="/coffee-beans.jpg"
           alt="coffe beans"
-          height={500}
-          width={500}
-          title="Apoya a nuestros orgullosos campesinos."
-          description="Todos nuestros cafes son cultivados cuidadosamente
+          width={1049}
+          height={699}
+          title="Apoya a nuestros orgullosos campesinos"
+          description="Todos nuestros granos de cafe son cultivados cuidadosamente
             por nuestros campesinos para que puedas disfrutar del sabor mas autentico del café."
+          direction="left"
         />
         <Section
-          title="Innovamos el comercio del café artesanal."
-          description="Queremos innovar la forma en la que se comercializa el café artesanal con las nuevas tecnologias."
+          title="Innovamos el comercio del café artesanal"
+          description="Queremos innovar la forma en la que se comercializa el café artesanal con las nuevas tecnologias.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           imagePath="/bartender.jpg"
           alt="bartender"
-          height={700}
           width={700}
+          height={1008}
         />
       </main>
       <Footer />
