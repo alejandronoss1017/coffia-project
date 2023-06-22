@@ -9,9 +9,9 @@ function OurClients({ clients }: ClientsProps) {
       <h1>Nuestros Clientes</h1>
       <div className={styles['client-logos']}>
         {clients.map((client, index) => (
-          <a href={client.website} target="_blank">
+          <a href={client.website} target="_blank" key={index}>
             <Image
-              key={index}
+              // key={index}
               src={client.logo}
               width={150}
               height={150}
