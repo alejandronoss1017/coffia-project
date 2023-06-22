@@ -11,9 +11,9 @@ export default function Footer() {
         <div className="col-span-1 lg:col-span-2">
           <Link
             href="/"
-            className="flex flex-initial items-center font-bold md:mr-24"
+            className="flex flex-initial items-center font-bold md:mr-24 lg:mr-0"
           >
-            <span className="rounded-full border border-zinc-700 mr-2">
+            <span className="flex flex-col items-center rounded-full border border-zinc-700 mr-0 ">
               <Image
                 src="/coffIAWhite.svg"
                 width={128}
@@ -99,10 +99,18 @@ export default function Footer() {
         <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-white">
           <div className="flex space-x-6 items-center h-10">
             {/* Put the link to the project repository */}
-            <a aria-label="Github Repository" href="https://github.com/">
+            <a
+              aria-label="Github Repository"
+              target="_blank"
+              href="https://github.com/alejandronoss1017/coffia-project"
+            >
               <GitHub width="40" height="40" fill="#FFFFFF" />
             </a>
-            <a aria-label="Instagram account" href="https://instagram.com/">
+            <a
+              aria-label="Instagram account"
+              href="https://instagram.com/"
+              target="_blank"
+            >
               <Instagram width="40" height="40" fill="#FFFFFF" />
             </a>
           </div>
@@ -110,13 +118,16 @@ export default function Footer() {
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-zinc-900">
         <div>
-          <span>&copy; 2023 CoffIA, Inc. All rights reserved.</span>
+          <span className="text-white">
+            &copy; 2023 CoffIA, Inc. All rights reserved.
+          </span>
         </div>
         <div className="flex items-center">
           <span className="text-white">Hecho con &#10084; por</span>
           <a
             className="ml-5"
             href="https://vercel.com"
+            target="_blank"
             aria-label="Vercel.com Link"
           >
             <Image
