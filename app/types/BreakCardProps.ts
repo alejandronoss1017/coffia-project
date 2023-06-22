@@ -5,4 +5,5 @@ export type BreakCardProps = {
   height?: number;
   title: string;
   description: string;
+  direction?:'right' | 'left';
 };

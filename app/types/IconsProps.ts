@@ -1,7 +1,7 @@
 export type IconsProps = {
   width: string;
   height: string;
-  fill: string;
+  fill?: string;
 };
 
 export type LinkedInProps = {
