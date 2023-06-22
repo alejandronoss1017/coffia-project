@@ -8,32 +8,37 @@ function BreakCard({
   width,
   height,
   description,
-  title
+  title,
+  direction
 }: BreakCardProps) {
   return (
-    <section className="bg-yellow border-2 m-6 flex flex-col-reverse items-center lg:text-lg lg:items-start lg:justify-center lg:flex-row">
-      <div>
-        {imagePath && (
-          <div className="my-8 border-2 border-gray-900 rounded-xl overflow-hidden">
-            <Image
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              alt={alt || 'Background image'}
-              src={imagePath}
-              width={width}
-              height={height}
-              className="max-w-max h-full object-fill"
-            />
+    <section className="bg-yellow w-screen border-y-2 md:w-11/12 md:border-2 md:rounded-lg md:p-5">
+      <article
+        className={imagePath ? 'md:grid md:grid-cols-2' : 'flex flex-col'}
+      >
+        <div className={direction == 'left' ? 'order-1' : ''}>
+          <div className="flex flex-col items-center">
+            <h2 className="text-center font-semibold py-5 text-3xl">{title}</h2>
+            <p className="text-justify px-5 md:max-w-xl md:text-xl lg:text-2xl">
+              {description}
+            </p>
           </div>
-        )}
-      </div>
-      <div className="lg:w-1/2">
-        <div className="p-4 text-center">
-          <h1 className="sm:pb-4 lg:font-bold">{title}</h1>
-          <p className="sm:max-w-none sm:text-2xl md:text-3xl lg:p-6">
-            {description}
-          </p>
         </div>
-      </div>
+        <div>
+          {imagePath && (
+            <figure className="py-5 px-2">
+              <Image
+                alt={alt || 'Background image'}
+                src={imagePath}
+                width={width}
+                height={height}
+                loading="lazy"
+                className="border-2 border-black rounded-lg"
+              />
+            </figure>
+          )}
+        </div>
+      </article>
     </section>
   );
 }
