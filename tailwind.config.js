@@ -38,6 +38,12 @@ module.exports = {
         'coffee-wallpaper': "url('/images/coffee-wallpaper.jpg')"
       },
       screens: {
+
+        /** 
+         *  min-width for mobile firts design,
+         *  if using max-width use means for desktop first design
+        */
+
         // => @media (min-width: 640px) {...}
         sm: '640px',
 
