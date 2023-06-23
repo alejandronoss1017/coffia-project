@@ -5,9 +5,36 @@ import OurClients from '../components/OurClients/OurClients';
 import Section from '../components/Section/Section';
 import BreakCard from '../components/BreakCard/BreakCard';
 import ImageOverlay from '../components/ImageOverlay/ImageOverlay';
-import { clientsData } from '../data/clientsData';
+import { Client } from '../types/Client';
 
-function AboutPage() {
+async function getClients(): Promise<{ clients: Client[] }> {
+  try {
+    const response = await fetch(
+      'http://' + process.env.API_HOSTNAME + '/clients'
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Failed to fetch data from API:', error);
+
+    // If fetch fails to the call the API makes a new request to the localhost
+    // const fallbackResponse = await fetch('http://localhost:3333/clients');
+    // if (!fallbackResponse.ok) {
+    // throw new Error('Failed to fetch data from fallback');
+    // }
+
+    return { clients: [] };
+    // return fallbackResponse.json();
+  }
+}
+
+async function AboutPage() {
+  const { clients } = await getClients();
+
   return (
     <>
       <Header />
@@ -54,7 +81,7 @@ function AboutPage() {
         </div>
 
         <section>
-          <OurClients clients={clientsData} />
+          <OurClients clients={clients} />
         </section>
         <section>
           <h1 className="text-center">Conoce al equipo</h1>
