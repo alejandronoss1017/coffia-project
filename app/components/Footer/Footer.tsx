@@ -135,6 +135,7 @@ export default function Footer() {
               width={40}
               height={40}
               alt="CoffIA logo"
+              className="h-auto"
             />
           </a>
         </div>

@@ -23,6 +23,7 @@ function Card({
             src={imagePath}
             alt={alt}
             fill={true}
+            sizes='(max-width: 640px) 100vw, 640px'
             className=" object-cover object-scale-dow h-24 w-40 "
           />
         </div>
